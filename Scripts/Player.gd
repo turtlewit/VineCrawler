@@ -6,7 +6,7 @@ extends KinematicBody
 var sensitivity = 0.5
 var mouse_movement = 0.0
 
-var speed = 10
+var speed = 20
 
 var gravity = Vector3(0, -9.8, 0)
 
