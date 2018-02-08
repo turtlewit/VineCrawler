@@ -89,7 +89,7 @@ height = 2.0
 
 [node name="DirectionalLight" type="DirectionalLight" parent="." index="0"]
 
-transform = Transform( 0.845673, 0.0801996, 0.527641, -0.460007, 0.610822, 0.64443, -0.270612, -0.787695, 0.553448, 0, 7.42229, 0 )
+transform = Transform( 0.958026, -0.163833, 0.235256, -0.0946374, 0.593881, 0.798968, -0.270612, -0.787695, 0.553448, 0, 7.42229, 0 )
 layers = 1
 light_color = Color( 1, 1, 1, 1 )
 light_energy = 1.0
@@ -100,7 +100,7 @@ light_bake_mode = 1
 light_cull_mask = -1
 shadow_enabled = true
 shadow_color = Color( 0, 0, 0, 1 )
-shadow_bias = 0.1
+shadow_bias = 0.16
 shadow_contact = 0.0
 shadow_reverse_cull_face = false
 editor_only = false
@@ -108,16 +108,39 @@ directional_shadow_mode = 2
 directional_shadow_split_1 = 0.1
 directional_shadow_split_2 = 0.2
 directional_shadow_split_3 = 0.5
-directional_shadow_blend_splits = false
-directional_shadow_normal_bias = 0.8
+directional_shadow_blend_splits = true
+directional_shadow_normal_bias = 0.3
 directional_shadow_bias_split_scale = 0.25
 directional_shadow_depth_range = 0
-directional_shadow_max_distance = 200.0
+directional_shadow_max_distance = 100.0
 _sections_unfolded = [ "Directional Shadow", "Light", "Shadow" ]
 
-[node name="WorldEnvironment" parent="." index="1" instance=ExtResource( 1 )]
+[node name="OmniLight" type="OmniLight" parent="." index="1"]
 
-[node name="MeshInstance" type="MeshInstance" parent="." index="2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97824, 7.89412, -14.301 )
+layers = 1
+light_color = Color( 1, 1, 1, 1 )
+light_energy = 1.02
+light_indirect_energy = 1.0
+light_negative = false
+light_specular = 0.5
+light_bake_mode = 1
+light_cull_mask = -1
+shadow_enabled = true
+shadow_color = Color( 0, 0, 0, 1 )
+shadow_bias = 0.15
+shadow_contact = 0.0
+shadow_reverse_cull_face = false
+editor_only = false
+omni_range = 14.1
+omni_attenuation = 1.0
+omni_shadow_mode = 1
+omni_shadow_detail = 1
+_sections_unfolded = [ "Light", "Omni", "Shadow" ]
+
+[node name="WorldEnvironment" parent="." index="2" instance=ExtResource( 1 )]
+
+[node name="MeshInstance" type="MeshInstance" parent="." index="3"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.2898, 6.57158, -11.7315 )
 layers = 1
@@ -149,29 +172,6 @@ constant_angular_velocity = Vector3( 0, 0, 0 )
 
 shape = SubResource( 3 )
 disabled = false
-
-[node name="OmniLight" type="OmniLight" parent="." index="3"]
-
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97824, 7.89412, -14.301 )
-layers = 1
-light_color = Color( 1, 1, 1, 1 )
-light_energy = 1.02
-light_indirect_energy = 1.0
-light_negative = false
-light_specular = 0.5
-light_bake_mode = 1
-light_cull_mask = -1
-shadow_enabled = true
-shadow_color = Color( 0, 0, 0, 1 )
-shadow_bias = 0.15
-shadow_contact = 0.0
-shadow_reverse_cull_face = false
-editor_only = false
-omni_range = 14.1
-omni_attenuation = 1.0
-omni_shadow_mode = 1
-omni_shadow_detail = 1
-_sections_unfolded = [ "Light", "Omni", "Shadow" ]
 
 [node name="MeshInstance2" type="MeshInstance" parent="." index="4"]
 
@@ -217,7 +217,7 @@ cell_scale = 1.0
 collision_layer = 1
 collision_mask = 1
 data = {
-"cells": PoolIntArray( 65536, 0, 1048576, 65537, 0, 655362, 131068, 0, 1048578, 131069, 0, 1048576, 131070, 0, 1048576, 131071, 0, 1048576, 65536, 65532, 1441792, 65537, 65532, 1441794, 131068, 65532, 2, 131069, 65532, 1441792, 131070, 65532, 1441792, 131071, 65532, 1441792, 0, 65533, 1, 65533, 65533, 1, 65534, 65533, 1048576, 65535, 65533, 1048576, 65536, 65533, 1, 65537, 65533, 655360, 131068, 65533, 0, 131069, 65533, 1, 131070, 65533, 1, 131071, 65533, 1, 0, 65534, 0, 65533, 65534, 655360, 65534, 65534, 1, 65535, 65534, 536870913, 65536, 65534, 1, 65537, 65534, 655360, 131068, 65534, 0, 131069, 65534, 1, 0, 65535, 1, 65533, 65535, 1, 65534, 65535, 1441792, 65535, 65535, 1441792, 65536, 65535, 1, 65537, 65535, 655360, 131068, 65535, 0, 131069, 65535, 1, 131070, 65535, 1, 131071, 65535, 1 )
+"cells": PoolIntArray( 65536, 0, 1048576, 65537, 0, 655362, 131068, 0, 1048578, 131069, 0, 1048576, 131070, 0, 1048576, 131071, 0, 1048576, 65536, 65532, 1441792, 65537, 65532, 1441794, 131068, 65532, 2, 131069, 65532, 1441792, 131070, 65532, 1441792, 131071, 65532, 1441792, 0, 65533, 1, 65533, 65533, 1, 65534, 65533, 1048576, 65535, 65533, 1048576, 65536, 65533, 1, 65537, 65533, 655360, 131068, 65533, 0, 131069, 65533, 536870913, 131070, 65533, 1, 131071, 65533, 1, 0, 65534, 0, 65533, 65534, 655360, 65534, 65534, 1, 65535, 65534, 1, 65536, 65534, 1, 65537, 65534, 655360, 131068, 65534, 0, 131069, 65534, 1, 0, 65535, 1, 65533, 65535, 1, 65534, 65535, 1441792, 65535, 65535, 1441792, 65536, 65535, 1, 65537, 65535, 655360, 131068, 65535, 0, 131069, 65535, 536870913, 131070, 65535, 1, 131071, 65535, 1 )
 }
 _sections_unfolded = [ "Cell" ]
 __meta__ = {
@@ -227,6 +227,7 @@ __meta__ = {
 
 [node name="Player" parent="." index="6" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1327, 6.02279, -1.63019 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Player" index="0"]
