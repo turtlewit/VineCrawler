@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/square.obj-98173846cc71c8199cb1a040b51c6231.mesh"
+
+[deps]
+
+files=[ "res://.import/square.obj-98173846cc71c8199cb1a040b51c6231.mesh" ]
+
+source_file="res://Tiles/square.obj"
+source_md5="2b8142799332cee8d03521f8fe464a26"
+
+dest_files=[ "res://.import/square.obj-98173846cc71c8199cb1a040b51c6231.mesh", "res://.import/square.obj-98173846cc71c8199cb1a040b51c6231.mesh" ]
+dest_md5="60891ad5cbdc3b4c4eb6d00379f076df"
+
+[params]
+
+generate_tangents=true

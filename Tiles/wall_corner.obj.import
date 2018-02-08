@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/wall_corner.obj-4829f3b5082c4b34b9fb351d0aa65fe6.mesh"
+
+[deps]
+
+files=[ "res://.import/wall_corner.obj-4829f3b5082c4b34b9fb351d0aa65fe6.mesh" ]
+
+source_file="res://Tiles/wall_corner.obj"
+source_md5="29ed0f0dac20c6a88766914c4e3c649a"
+
+dest_files=[ "res://.import/wall_corner.obj-4829f3b5082c4b34b9fb351d0aa65fe6.mesh", "res://.import/wall_corner.obj-4829f3b5082c4b34b9fb351d0aa65fe6.mesh" ]
+dest_md5="200b18ec11ede6d78b8ba8e786d23a1e"
+
+[params]
+
+generate_tangents=true
