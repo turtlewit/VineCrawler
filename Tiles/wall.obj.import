@@ -9,10 +9,10 @@ path="res://.import/wall.obj-f38a682d5b508d9efc107dc1fdd50537.mesh"
 files=[ "res://.import/wall.obj-f38a682d5b508d9efc107dc1fdd50537.mesh" ]
 
 source_file="res://Tiles/wall.obj"
-source_md5="21f895d69a377edbfa3ccb49f3aa258e"
+source_md5="5ba4b93ee8eb4a807ed5cdc819cc4bf7"
 
 dest_files=[ "res://.import/wall.obj-f38a682d5b508d9efc107dc1fdd50537.mesh", "res://.import/wall.obj-f38a682d5b508d9efc107dc1fdd50537.mesh" ]
-dest_md5="b44189f806518a9ed44be2311d8909ef"
+dest_md5="ab3e76c3c0fd0ca4482e83f3910121be"
 
 [params]
 

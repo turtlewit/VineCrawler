@@ -1,28 +1,29 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Tiles/wall_floor.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://Tiles/square.obj" type="ArrayMesh" id=2]
-[ext_resource path="res://Tiles/wall_floor_corner.obj" type="ArrayMesh" id=3]
-[ext_resource path="res://Tiles/wall_corner.obj" type="ArrayMesh" id=4]
-[ext_resource path="res://Tiles/wall.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://Tiles/Material.material" type="Material" id=2]
+[ext_resource path="res://Tiles/square.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://Tiles/wall_floor_corner.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://Tiles/wall_corner.obj" type="ArrayMesh" id=5]
+[ext_resource path="res://Tiles/wall.obj" type="ArrayMesh" id=6]
 
 [sub_resource type="ConcavePolygonShape" id=1]
 
 data = PoolVector3Array( 2.5, 0, 2.5, 2.5, 0, -2.5, -2.5, 0, 2.5, -2.5, 0, 2.5, 2.5, 0, -2.5, -2.5, 0, -2.5, -2.5, 0.5, -2.5, 2.5, 0.5, -2.5, -2.5, 0.5, 2.5, -2.5, 0.5, 2.5, 2.5, 0.5, -2.5, 2.498, 0.5, 2.5, 2.5, 0.5, -2.5, 2.5, 0, -2.5, 2.498, 0.5, 2.5, 2.498, 0.5, 2.5, 2.5, 0, -2.5, 2.5, 0, 2.5, 2.498, 0.5, 2.5, 2.5, 0, 2.5, -2.5, 0.5, 2.5, -2.5, 0.5, 2.5, 2.5, 0, 2.5, -2.5, 0, 2.5, -2.5, 0.5, 2.5, -2.5, 0, 2.5, -2.5, 0.5, -2.5, -2.5, 0.5, -2.5, -2.5, 0, 2.5, -2.5, 0, -2.5, 2.5, 0, -2.5, 2.5, 0.5, -2.5, -2.5, 0, -2.5, -2.5, 0, -2.5, 2.5, 0.5, -2.5, -2.5, 0.5, -2.5, -2.5, 5, 2.5, -2.5, 0.5, 2.5, -2.5, 5, -2.5, -2.5, 5, -2.5, -2.5, 0.5, 2.5, -2.5, 0.5, -2.5, -2.5, 5, -2.5, -2.5, 0.5, -2.5, -2, 5, -2.5, -2, 5, -2.5, -2.5, 0.5, -2.5, -2, 0.5, -2.5, -2, 5, -2.5, -2, 0.5, -2.5, -2, 5, 2.5, -2, 5, 2.5, -2, 0.5, -2.5, -2, 0.5, 2.5, -2, 5, 2.5, -2, 0.5, 2.5, -2.5, 5, 2.5, -2.5, 5, 2.5, -2, 0.5, 2.5, -2.5, 0.5, 2.5, -2, 0.5, -2.5, -2.5, 0.5, -2.5, -2, 0.5, 2.5, -2, 0.5, 2.5, -2.5, 0.5, -2.5, -2.5, 0.5, 2.5, -2.5, 5, -2.5, -2, 5, -2.5, -2.5, 5, 2.5, -2.5, 5, 2.5, -2, 5, -2.5, -2, 5, 2.5 )
 
-[sub_resource type="ConcavePolygonShape" id=4]
+[sub_resource type="ConcavePolygonShape" id=2]
 
 data = PoolVector3Array( 2.5, 0, 2.5, 2.5, 0, -2.5, -2.5, 0, 2.5, -2.5, 0, 2.5, 2.5, 0, -2.5, -2.5, 0, -2.5, -2.5, 0.5, -2.5, 2.5, 0.5, -2.5, -2.5, 0.5, 2.5, -2.5, 0.5, 2.5, 2.5, 0.5, -2.5, 2.498, 0.5, 2.5, 2.5, 0.5, -2.5, 2.5, 0, -2.5, 2.498, 0.5, 2.5, 2.498, 0.5, 2.5, 2.5, 0, -2.5, 2.5, 0, 2.5, 2.498, 0.5, 2.5, 2.5, 0, 2.5, -2.5, 0.5, 2.5, -2.5, 0.5, 2.5, 2.5, 0, 2.5, -2.5, 0, 2.5, -2.5, 0.5, 2.5, -2.5, 0, 2.5, -2.5, 0.5, -2.5, -2.5, 0.5, -2.5, -2.5, 0, 2.5, -2.5, 0, -2.5, 2.5, 0, -2.5, 2.5, 0.5, -2.5, -2.5, 0, -2.5, -2.5, 0, -2.5, 2.5, 0.5, -2.5, -2.5, 0.5, -2.5 )
 
-[sub_resource type="ConcavePolygonShape" id=7]
+[sub_resource type="ConcavePolygonShape" id=3]
 
 data = PoolVector3Array( 2.5, 0, 2.5, 2.5, 0, -2.5, -2.5, 0, 2.5, -2.5, 0, 2.5, 2.5, 0, -2.5, -2.5, 0, -2.5, -2.5, 0.5, -2.5, 2.5, 0.5, -2.5, -2.5, 0.5, 2.5, -2.5, 0.5, 2.5, 2.5, 0.5, -2.5, 2.498, 0.5, 2.5, 2.5, 0.5, -2.5, 2.5, 0, -2.5, 2.498, 0.5, 2.5, 2.498, 0.5, 2.5, 2.5, 0, -2.5, 2.5, 0, 2.5, 2.498, 0.5, 2.5, 2.5, 0, 2.5, -2.5, 0.5, 2.5, -2.5, 0.5, 2.5, 2.5, 0, 2.5, -2.5, 0, 2.5, -2.5, 0.5, 2.5, -2.5, 0, 2.5, -2.5, 0.5, -2.5, -2.5, 0.5, -2.5, -2.5, 0, 2.5, -2.5, 0, -2.5, 2.5, 0, -2.5, 2.5, 0.5, -2.5, -2.5, 0, -2.5, -2.5, 0, -2.5, 2.5, 0.5, -2.5, -2.5, 0.5, -2.5, -2.5, 5, 2.5, -2.5, 0.5, 2.5, -2.5, 5, -2.5, -2.5, 5, -2.5, -2.5, 0.5, 2.5, -2.5, 0.5, -2.5, -2.5, 5, -2.5, -2.5, 0.5, -2.5, -2, 5, -2.5, -2, 5, -2.5, -2.5, 0.5, -2.5, -2, 0.5, -2.5, -2, 5, -2.5, -2, 0.5, -2.5, -2, 5, 2.5, -2, 5, 2.5, -2, 0.5, -2.5, -2, 0.5, 2.5, -2, 5, 2.5, -2, 0.5, 2.5, -2.5, 5, 2.5, -2.5, 5, 2.5, -2, 0.5, 2.5, -2.5, 0.5, 2.5, -2, 0.5, -2.5, -2.5, 0.5, -2.5, -2, 0.5, 2.5, -2, 0.5, 2.5, -2.5, 0.5, -2.5, -2.5, 0.5, 2.5, -2.5, 5, -2.5, -2, 5, -2.5, -2.5, 5, 2.5, -2.5, 5, 2.5, -2, 5, -2.5, -2, 5, 2.5, -2, 5, -2, -2, 0.5, -2, -2, 5, -2.5, -2, 5, -2.5, -2, 0.5, -2, -2, 0.5, -2.5, -2, 5, -2.5, -2, 0.5, -2.5, 2.5, 5, -2.5, 2.5, 5, -2.5, -2, 0.5, -2.5, 2.5, 0.5, -2.5, 2.5, 5, -2.5, 2.5, 0.5, -2.5, 2.5, 5, -2, 2.5, 5, -2, 2.5, 0.5, -2.5, 2.5, 0.5, -2, 2.5, 5, -2, 2.5, 0.5, -2, -2, 5, -2, -2, 5, -2, 2.5, 0.5, -2, -2, 0.5, -2, 2.5, 0.5, -2.5, -2, 0.5, -2.5, 2.5, 0.5, -2, 2.5, 0.5, -2, -2, 0.5, -2.5, -2, 0.5, -2, -2, 5, -2.5, 2.5, 5, -2.5, -2, 5, -2, -2, 5, -2, 2.5, 5, -2.5, 2.5, 5, -2 )
 
-[sub_resource type="ConcavePolygonShape" id=10]
+[sub_resource type="ConcavePolygonShape" id=4]
 
 data = PoolVector3Array( -2.5, 5, 2.5, -2.5, 0.5, 2.5, -2.5, 5, -2.5, -2.5, 5, -2.5, -2.5, 0.5, 2.5, -2.5, 0.5, -2.5, -2.5, 5, -2.5, -2.5, 0.5, -2.5, -2, 5, -2.5, -2, 5, -2.5, -2.5, 0.5, -2.5, -2, 0.5, -2.5, -2, 5, -2.5, -2, 0.5, -2.5, -2, 5, 2.5, -2, 5, 2.5, -2, 0.5, -2.5, -2, 0.5, 2.5, -2, 5, 2.5, -2, 0.5, 2.5, -2.5, 5, 2.5, -2.5, 5, 2.5, -2, 0.5, 2.5, -2.5, 0.5, 2.5, -2, 0.5, -2.5, -2.5, 0.5, -2.5, -2, 0.5, 2.5, -2, 0.5, 2.5, -2.5, 0.5, -2.5, -2.5, 0.5, 2.5, -2.5, 5, -2.5, -2, 5, -2.5, -2.5, 5, 2.5, -2.5, 5, 2.5, -2, 5, -2.5, -2, 5, 2.5, -2, 5, -2, -2, 0.5, -2, -2, 5, -2.5, -2, 5, -2.5, -2, 0.5, -2, -2, 0.5, -2.5, -2, 5, -2.5, -2, 0.5, -2.5, 2.5, 5, -2.5, 2.5, 5, -2.5, -2, 0.5, -2.5, 2.5, 0.5, -2.5, 2.5, 5, -2.5, 2.5, 0.5, -2.5, 2.5, 5, -2, 2.5, 5, -2, 2.5, 0.5, -2.5, 2.5, 0.5, -2, 2.5, 5, -2, 2.5, 0.5, -2, -2, 5, -2, -2, 5, -2, 2.5, 0.5, -2, -2, 0.5, -2, 2.5, 0.5, -2.5, -2, 0.5, -2.5, 2.5, 0.5, -2, 2.5, 0.5, -2, -2, 0.5, -2.5, -2, 0.5, -2, -2, 5, -2.5, 2.5, 5, -2.5, -2, 5, -2, -2, 5, -2, 2.5, 5, -2.5, 2.5, 5, -2 )
 
-[sub_resource type="ConcavePolygonShape" id=13]
+[sub_resource type="ConcavePolygonShape" id=5]
 
 data = PoolVector3Array( -2.5, 5, 2.5, -2.5, 0.5, 2.5, -2.5, 5, -2.5, -2.5, 5, -2.5, -2.5, 0.5, 2.5, -2.5, 0.5, -2.5, -2.5, 5, -2.5, -2.5, 0.5, -2.5, -2, 5, -2.5, -2, 5, -2.5, -2.5, 0.5, -2.5, -2, 0.5, -2.5, -2, 5, -2.5, -2, 0.5, -2.5, -2, 5, 2.5, -2, 5, 2.5, -2, 0.5, -2.5, -2, 0.5, 2.5, -2, 5, 2.5, -2, 0.5, 2.5, -2.5, 5, 2.5, -2.5, 5, 2.5, -2, 0.5, 2.5, -2.5, 0.5, 2.5, -2, 0.5, -2.5, -2.5, 0.5, -2.5, -2, 0.5, 2.5, -2, 0.5, 2.5, -2.5, 0.5, -2.5, -2.5, 0.5, 2.5, -2.5, 5, -2.5, -2, 5, -2.5, -2.5, 5, 2.5, -2.5, 5, 2.5, -2, 5, -2.5, -2, 5, 2.5 )
 
@@ -42,7 +43,8 @@ lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
 mesh = ExtResource( 1 )
 skeleton = NodePath("..")
-material/0 = null
+material/0 = ExtResource( 2 )
+_sections_unfolded = [ "material" ]
 
 [node name="StaticBody" type="StaticBody" parent="wall_floor" index="0"]
 
@@ -72,9 +74,10 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 2 )
+mesh = ExtResource( 3 )
 skeleton = NodePath("..")
-material/0 = null
+material/0 = ExtResource( 2 )
+_sections_unfolded = [ "material" ]
 
 [node name="StaticBody" type="StaticBody" parent="floor" index="0"]
 
@@ -89,7 +92,7 @@ constant_angular_velocity = Vector3( 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="floor/StaticBody" index="0"]
 
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 disabled = false
 
 [node name="wall_floor_corner" type="MeshInstance" parent="." index="2"]
@@ -104,9 +107,10 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 3 )
+mesh = ExtResource( 4 )
 skeleton = NodePath("..")
-material/0 = null
+material/0 = ExtResource( 2 )
+_sections_unfolded = [ "material" ]
 
 [node name="StaticBody" type="StaticBody" parent="wall_floor_corner" index="0"]
 
@@ -121,7 +125,7 @@ constant_angular_velocity = Vector3( 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="wall_floor_corner/StaticBody" index="0"]
 
-shape = SubResource( 7 )
+shape = SubResource( 3 )
 disabled = false
 
 [node name="wall_corner" type="MeshInstance" parent="." index="3"]
@@ -136,9 +140,10 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 4 )
+mesh = ExtResource( 5 )
 skeleton = NodePath("..")
-material/0 = null
+material/0 = ExtResource( 2 )
+_sections_unfolded = [ "material" ]
 
 [node name="StaticBody" type="StaticBody" parent="wall_corner" index="0"]
 
@@ -153,7 +158,7 @@ constant_angular_velocity = Vector3( 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="wall_corner/StaticBody" index="0"]
 
-shape = SubResource( 10 )
+shape = SubResource( 4 )
 disabled = false
 
 [node name="wall" type="MeshInstance" parent="." index="4"]
@@ -168,9 +173,10 @@ lod_min_distance = 0.0
 lod_min_hysteresis = 0.0
 lod_max_distance = 0.0
 lod_max_hysteresis = 0.0
-mesh = ExtResource( 5 )
+mesh = ExtResource( 6 )
 skeleton = NodePath("..")
-material/0 = null
+material/0 = ExtResource( 2 )
+_sections_unfolded = [ "material" ]
 
 [node name="StaticBody" type="StaticBody" parent="wall" index="0"]
 
@@ -185,7 +191,7 @@ constant_angular_velocity = Vector3( 0, 0, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="wall/StaticBody" index="0"]
 
-shape = SubResource( 13 )
+shape = SubResource( 5 )
 disabled = false
 
 

@@ -9,10 +9,10 @@ path="res://.import/square.obj-98173846cc71c8199cb1a040b51c6231.mesh"
 files=[ "res://.import/square.obj-98173846cc71c8199cb1a040b51c6231.mesh" ]
 
 source_file="res://Tiles/square.obj"
-source_md5="2b8142799332cee8d03521f8fe464a26"
+source_md5="240790700a5cb72f785b51ea673e1416"
 
 dest_files=[ "res://.import/square.obj-98173846cc71c8199cb1a040b51c6231.mesh", "res://.import/square.obj-98173846cc71c8199cb1a040b51c6231.mesh" ]
-dest_md5="60891ad5cbdc3b4c4eb6d00379f076df"
+dest_md5="9f98d181ecf075f57c140f12fb25ccfb"
 
 [params]
 
