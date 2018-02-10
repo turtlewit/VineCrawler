@@ -3,12 +3,15 @@ extends KinematicBody
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
-var sensitivity = 0.5
-var mouse_movement = 0.0
+var sensitivity = 0.1
 
-var speed = 20
+var max_speed = 20
 
 var gravity = Vector3(0, -9.8, 0)
+var linear_velocity = Vector3()
+
+var accel = 19.0
+var deaccel = 14.0
 
 func _ready():
 	# Called every time the node is added to the scene.
@@ -18,9 +21,16 @@ func _ready():
 func _physics_process(delta):
 	# Called every frame. Delta is time since last frame.
 	# Update game logic here.
-	rotate(Vector3(0,1,0), -1 * sensitivity * mouse_movement * delta)
-	mouse_movement = 0.0
-	var dir = Vector3(0,0,0)
+	var lv=linear_velocity
+	lv+=gravity * delta
+	
+	var up = transform.basis.y
+	var vv = up.dot(lv)
+	var hv = lv - up*vv
+	
+	var hspeed = hv.length()
+	
+	var dir = Vector3()
 	if Input.is_action_pressed("move_forward"):
 		dir += -transform.basis.z
 	if Input.is_action_pressed("move_backward"):
@@ -29,14 +39,29 @@ func _physics_process(delta):
 		dir += -transform.basis.x 
 	if Input.is_action_pressed("move_right"):
 		dir += transform.basis.x 
+	print(dir)
+	var target_dir = (dir - up*dir.dot(up)).normalized()
+	if is_on_floor():
+		if dir.length() > 0.1:
+			if (hspeed < max_speed):
+					hspeed += accel*delta
+		else:
+			hspeed -= deaccel*delta
+			if (hspeed < 0):
+				hspeed = 0
+				
+		hv = dir.normalized()*hspeed
+	else:
+		var hs
+		if (dir.length() > 0.1):
+			hv += target_dir*(accel*0.2)*delta
+			if (hv.length() > max_speed):
+				hv = hv.normalized()*max_speed
 	
+	lv = hv + up*vv
+	linear_velocity = move_and_slide(lv,up)
 
-		
-	move_and_slide(dir.normalized() * speed, transform.basis.y)
-	print(is_on_floor())
-	if not is_on_floor():
-		move_and_slide(gravity)
 
 func _input(ev):
 	if (ev is InputEventMouseMotion):
-		mouse_movement = ev.relative.x
+		rotate_y(-deg2rad(ev.relative.x) * sensitivity)

@@ -20,6 +20,7 @@ window/size/width=1920
 window/size/height=1080
 window/size/resizable=false
 window/size/fullscreen=true
+window/vsync/use_vsync=false
 
 [input]
 
@@ -35,5 +36,4 @@ move_right=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name
 [rendering]
 
 quality/filters/anisotropic_filter_level=16
-quality/filters/msaa=4
 environment/default_environment="res://default_env.tres"
