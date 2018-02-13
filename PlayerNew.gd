@@ -61,12 +61,13 @@ func _ready():
 func _physics_process(delta):
 	# Called every frame. Delta is time since last frame.
 	# Update game logic here.
+	
 	queue_jump()
 	if touching_ground:
 		ground_move(delta)
 	else:
 		air_move(delta)
-		
+	
 	move_and_slide(player_velocity, Vector3(0,1,0))
 	touching_ground = is_on_floor()
 	
@@ -118,9 +119,10 @@ func air_move(delta):
 	var wishspeed = wishdir.length()
 	wishspeed *= move_speed
 	
+	
 	wishdir = wishdir.normalized()
 	move_direction_norm = wishdir
-	wishspeed *= scale
+	#wishspeed *= scale
 	
 	
 	var wishspeed2 = wishspeed
@@ -133,7 +135,7 @@ func air_move(delta):
 		if wishspeed > side_strafe_speed:
 			wishspeed = side_strafe_speed
 		accel = side_strafe_acceleration
-	
+		
 	accelerate(wishdir, wishspeed, accel, delta)
 	if air_control > 0:
 		air_control(wishdir, wishspeed2, delta)
@@ -145,7 +147,7 @@ func air_control(wishdir, wishspeed, delta):
 	var speed = 0.0
 	var dot = 0.0
 	var k = 0.0
-	print ((abs(cmd.forward_move) < 0.001) or (abs(wishspeed) < 0.001))
+	
 	if (abs(cmd.forward_move) < 0.001) or (abs(wishspeed) < 0.001):
 		return
 	zspeed = player_velocity.y
