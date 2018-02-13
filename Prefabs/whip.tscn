@@ -55,7 +55,7 @@ uv2_triplanar = false
 uv2_triplanar_sharpness = 1.0
 proximity_fade_enable = false
 distance_fade_enable = false
-_sections_unfolded = [ "Albedo", "Ambient Occlusion", "Metallic", "Parameters" ]
+_sections_unfolded = [ "Albedo", "Metallic", "Parameters" ]
 
 [sub_resource type="Animation" id=2]
 
@@ -232,7 +232,7 @@ _sections_unfolded = [ "Flags", "Geometry", "Transform" ]
 
 [node name="section_2" type="Sprite3D" parent="section_0/section_1" index="0"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.10639e-08, 5.96046e-08, -0.196666 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.23517e-08, 5.96046e-08, -0.196666 )
 layers = 1
 material_override = SubResource( 1 )
 cast_shadow = 1
@@ -264,7 +264,7 @@ _sections_unfolded = [ "Flags", "Geometry", "Transform" ]
 
 [node name="section_3" type="Sprite3D" parent="section_0/section_1/section_2" index="0"]
 
-transform = Transform( 1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, 0, -0.262312 )
+transform = Transform( 1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 3.72529e-09, 2.98023e-08, -0.262312 )
 layers = 1
 material_override = SubResource( 1 )
 cast_shadow = 1
@@ -296,7 +296,7 @@ _sections_unfolded = [ "Flags", "Geometry", "Transform" ]
 
 [node name="section_4" type="Sprite3D" parent="section_0/section_1/section_2/section_3" index="0"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25136e-08, 0, -0.308283 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86265e-09, -5.96046e-08, -0.308283 )
 layers = 1
 material_override = SubResource( 1 )
 cast_shadow = 1
@@ -328,7 +328,7 @@ _sections_unfolded = [ "Flags", "Geometry", "Transform" ]
 
 [node name="section_5" type="Sprite3D" parent="section_0/section_1/section_2/section_3/section_4" index="0"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45058e-09, -8.9407e-08, -0.315066 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11759e-08, -5.96046e-08, -0.315066 )
 layers = 1
 material_override = SubResource( 1 )
 cast_shadow = 1
@@ -360,7 +360,7 @@ _sections_unfolded = [ "Flags", "Geometry", "Transform" ]
 
 [node name="section_6" type="Sprite3D" parent="section_0/section_1/section_2/section_3/section_4/section_5" index="0"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.47035e-08, -0.40227 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.96046e-08, -0.40227 )
 layers = 1
 material_override = SubResource( 1 )
 cast_shadow = 1
@@ -452,7 +452,7 @@ hframes = 1
 frame = 0
 region_enabled = false
 region_rect = Rect2( 0, 0, 0, 0 )
-_sections_unfolded = [ "Flags", "Geometry" ]
+_sections_unfolded = [ "Flags", "Geometry", "Transform" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
 
@@ -464,5 +464,6 @@ playback_speed = 1.0
 anims/Attack = ExtResource( 4 )
 anims/Idle = SubResource( 2 )
 blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
 
 

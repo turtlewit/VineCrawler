@@ -4,7 +4,7 @@ extends Spatial
 # var a = 2
 # var b = "textvar"
 var anim_player
-var ray_length = 7
+var ray_length = 10
 var camera
 var has_attacked = false
 func _ready():
@@ -25,7 +25,7 @@ func _process(delta):
 		if !anim_player.is_playing():
 			anim_player.play("Idle")
 	
-	if anim_player.current_animation == "Attack" and anim_player.current_animation_position >= 0.2 and !has_attacked:
+	if anim_player.current_animation == "Attack" and anim_player.current_animation_position >= 0.46 and !has_attacked:
 		attack()
 		has_attacked = true
 
