@@ -68,7 +68,7 @@ func _physics_process(delta):
 	else:
 		air_move(delta)
 	
-	move_and_slide(player_velocity, Vector3(0,1,0))
+	player_velocity = move_and_slide(player_velocity, Vector3(0,1,0))
 	touching_ground = is_on_floor()
 	
 
