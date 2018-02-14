@@ -160,7 +160,7 @@ tracks/7/keys = {
 "values": [ Vector3( -5.40952, 0, 0 ) ]
 }
 
-[node name="whip" type="Spatial"]
+[node name="whip" type="Spatial" index="0"]
 
 transform = Transform( 2.73688, 0, 0, 0, 2.73688, 0, 0, 0, 2.73688, 0, 0, 0 )
 script = ExtResource( 1 )
