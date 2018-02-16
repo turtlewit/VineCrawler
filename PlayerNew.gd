@@ -1,95 +1,57 @@
 extends KinematicBody
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
 var cmd = {
 	forward_move 	= 0.0,
 	right_move 		= 0.0,
 	up_move 		= 0.0
 }
 
-var player_view
-var player_view_y_offset = 0.4
-var x_mouse_sensitivity = 0.1
-var y_mouse_sensitivity = 0.1
+export var x_mouse_sensitivity = 0.1
 
-var gravity = 20
+export var gravity = 20
 
-var friction = 6.0
+export var friction = 6.0
 
-var move_speed = 15.0
-var run_acceleration = 14.0
-var run_deacceleration = 10.0
-var air_acceleration = 2.0
-var air_deacceleration = 2.0
-var air_control = 0.3
-var side_strafe_acceleration = 50.0
-var side_strafe_speed = 1.0
-var jump_speed = 8.0
-var move_scale = 1.0
-
-var rot_x = 0.0
-var rot_y = 0.0
+export var move_speed = 15.0
+export var run_acceleration = 14.0
+export var run_deacceleration = 10.0
+export var air_acceleration = 2.0
+export var air_deacceleration = 2.0
+export var air_control = 0.3
+export var side_strafe_acceleration = 50.0
+export var side_strafe_speed = 1.0
+export var jump_speed = 8.0
+export var move_scale = 1.0
 
 var move_direction_norm = Vector3()
 var player_velocity = Vector3()
-var player_top_velocity = 0.0
+
+var up = Vector3(0,1,0)
 
 var wish_jump = false;
 
 var touching_ground = false;
 
-var player_friction = 0.0
-
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
 	set_physics_process(true)
-	player_view = $Player_Camera
-	#player_view.translation = Vector3(
-	#	translation.x, 
-	#	translation.y, 
-	#	translation.z
-	#)
-	
-	#_controller is self
-
-#func _physics_process(delta):
-	
 
 func _physics_process(delta):
-	# Called every frame. Delta is time since last frame.
-	# Update game logic here.
-	
 	queue_jump()
 	if touching_ground:
 		ground_move(delta)
 	else:
 		air_move(delta)
 	
-	player_velocity = move_and_slide(player_velocity, Vector3(0,1,0))
+	player_velocity = move_and_slide(player_velocity, up)
 	touching_ground = is_on_floor()
-	
-
-	
-	#player_view.transform.origin = Vector3(
-	#	transform.origin.x, 
-	#	transform.origin.y, 
-	#	transform.origin.z
-	#)
 
 func set_movement_dir():
 	cmd.forward_move = 0.0
 	cmd.right_move = 0.0
-	if Input.is_action_pressed("move_forward"):
-		cmd.forward_move = 1.0
-	if Input.is_action_pressed("move_backward"):
-		cmd.forward_move = -1.0
-	if Input.is_action_pressed("move_left"):
-		cmd.right_move = -1.0
-	if Input.is_action_pressed("move_right"):
-		cmd.right_move = 1.0
+	cmd.forward_move += int(Input.is_action_pressed("move_forward"))
+	cmd.forward_move -= int(Input.is_action_pressed("move_backward"))
+	cmd.right_move += int(Input.is_action_pressed("move_right"))
+	cmd.right_move -= int(Input.is_action_pressed("move_left"))
 
 func queue_jump():
 	if Input.is_action_just_pressed("jump") and !wish_jump:
@@ -106,24 +68,14 @@ func air_move(delta):
 	
 	set_movement_dir()
 	
-	#wishdir = Vector3(cmd.right_move, 0, cmd.forward_move)
-	if cmd.right_move > 0:
-		wishdir += transform.basis.x
-	elif cmd.right_move < 0:
-		wishdir -= transform.basis.x
-	if cmd.forward_move > 0:
-		wishdir -= transform.basis.z
-	elif cmd.forward_move < 0:
-		wishdir += transform.basis.z
+	wishdir += transform.basis.x * cmd.right_move
+	wishdir -= transform.basis.z * cmd.forward_move
 	
 	var wishspeed = wishdir.length()
 	wishspeed *= move_speed
 	
-	
 	wishdir = wishdir.normalized()
 	move_direction_norm = wishdir
-	#wishspeed *= scale
-	
 	
 	var wishspeed2 = wishspeed
 	if player_velocity.dot(wishdir) < 0:
@@ -169,7 +121,7 @@ func air_control(wishdir, wishspeed, delta):
 		move_direction_norm = player_velocity
 	
 	player_velocity.x *= speed 
-	player_velocity.y = zspeed #note i guess
+	player_velocity.y = zspeed 
 	player_velocity.z *= speed 
 
 func ground_move(delta):
@@ -184,15 +136,9 @@ func ground_move(delta):
 	
 	var scale = cmd_scale()
 	
-	#wishdir = Vector3()
-	if cmd.right_move > 0:
-		wishdir += transform.basis.x
-	elif cmd.right_move < 0:
-		wishdir -= transform.basis.x
-	if cmd.forward_move > 0:
-		wishdir -= transform.basis.z
-	elif cmd.forward_move < 0:
-		wishdir += transform.basis.z
+	wishdir += transform.basis.x * cmd.right_move
+	wishdir -= transform.basis.z * cmd.forward_move
+	
 	wishdir = wishdir.normalized()
 	move_direction_norm = wishdir
 	
@@ -226,7 +172,6 @@ func apply_friction(t, delta):
 		drop = control * friction * delta * t
 	
 	newspeed = speed - drop;
-	player_friction = newspeed
 	if newspeed < 0:
 		newspeed = 0
 	if speed > 0:
@@ -269,4 +214,4 @@ func cmd_scale():
 
 func _input(ev):
 	if (ev is InputEventMouseMotion):
-		rotate_y(-deg2rad(ev.relative.x) * y_mouse_sensitivity)
+		rotate_y(-deg2rad(ev.relative.x) * x_mouse_sensitivity)

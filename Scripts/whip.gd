@@ -11,7 +11,7 @@ func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
 	anim_player = $AnimationPlayer
-	camera = get_parent()
+	camera = get_node("/root/Scene/Player/Player_Camera")
 
 func _process(delta):
 	# Called every frame. Delta is time since last frame.

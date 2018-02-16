@@ -160,7 +160,7 @@ tracks/7/keys = {
 "values": [ Vector3( -5.40952, 0, 0 ) ]
 }
 
-[node name="whip" type="Spatial" index="0"]
+[node name="whip" type="Spatial"]
 
 transform = Transform( 2.73688, 0, 0, 0, 2.73688, 0, 0, 0, 2.73688, 0, 0, 0 )
 script = ExtResource( 1 )
@@ -169,7 +169,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="section_0" type="Sprite3D" parent="." index="0"]
 
 transform = Transform( 0.912189, 0.409769, 0, -0.409769, 0.91219, 0, 0, 0, 1, 0, 0, 0 )
-layers = 1
+layers = 2
 material_override = SubResource( 1 )
 cast_shadow = 1
 extra_cull_margin = 0.0
@@ -201,7 +201,7 @@ _sections_unfolded = [ "Flags", "Geometry", "Transform" ]
 [node name="section_1" type="Sprite3D" parent="section_0" index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.94801e-09, -7.45058e-09, -0.152393 )
-layers = 1
+layers = 2
 material_override = SubResource( 1 )
 cast_shadow = 1
 extra_cull_margin = 0.0
@@ -233,7 +233,7 @@ _sections_unfolded = [ "Flags", "Geometry", "Transform" ]
 [node name="section_2" type="Sprite3D" parent="section_0/section_1" index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.23517e-08, 5.96046e-08, -0.196666 )
-layers = 1
+layers = 2
 material_override = SubResource( 1 )
 cast_shadow = 1
 extra_cull_margin = 0.0
@@ -265,7 +265,7 @@ _sections_unfolded = [ "Flags", "Geometry", "Transform" ]
 [node name="section_3" type="Sprite3D" parent="section_0/section_1/section_2" index="0"]
 
 transform = Transform( 1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 3.72529e-09, 2.98023e-08, -0.262312 )
-layers = 1
+layers = 2
 material_override = SubResource( 1 )
 cast_shadow = 1
 extra_cull_margin = 0.0
@@ -297,7 +297,7 @@ _sections_unfolded = [ "Flags", "Geometry", "Transform" ]
 [node name="section_4" type="Sprite3D" parent="section_0/section_1/section_2/section_3" index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86265e-09, -5.96046e-08, -0.308283 )
-layers = 1
+layers = 2
 material_override = SubResource( 1 )
 cast_shadow = 1
 extra_cull_margin = 0.0
@@ -329,7 +329,7 @@ _sections_unfolded = [ "Flags", "Geometry", "Transform" ]
 [node name="section_5" type="Sprite3D" parent="section_0/section_1/section_2/section_3/section_4" index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11759e-08, -5.96046e-08, -0.315066 )
-layers = 1
+layers = 2
 material_override = SubResource( 1 )
 cast_shadow = 1
 extra_cull_margin = 0.0
@@ -361,7 +361,7 @@ _sections_unfolded = [ "Flags", "Geometry", "Transform" ]
 [node name="section_6" type="Sprite3D" parent="section_0/section_1/section_2/section_3/section_4/section_5" index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.96046e-08, -0.40227 )
-layers = 1
+layers = 2
 material_override = SubResource( 1 )
 cast_shadow = 1
 extra_cull_margin = 0.0
@@ -393,7 +393,7 @@ _sections_unfolded = [ "Flags", "Geometry", "Transform" ]
 [node name="section_7" type="Sprite3D" parent="section_0/section_1/section_2/section_3/section_4/section_5/section_6" index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.42844e-07, -0.438531 )
-layers = 1
+layers = 2
 material_override = SubResource( 1 )
 cast_shadow = 1
 extra_cull_margin = 0.0
@@ -425,7 +425,7 @@ _sections_unfolded = [ "Flags", "Geometry", "Transform" ]
 [node name="end" type="Sprite3D" parent="section_0/section_1/section_2/section_3/section_4/section_5/section_6/section_7" index="0"]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.51473 )
-layers = 1
+layers = 2
 material_override = SubResource( 1 )
 cast_shadow = 1
 extra_cull_margin = 0.0
