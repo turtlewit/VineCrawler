@@ -23,6 +23,8 @@ export var side_strafe_speed = 1.0
 export var jump_speed = 8.0
 export var move_scale = 1.0
 
+export var ground_snap_tolerance = 1
+
 var move_direction_norm = Vector3()
 var player_velocity = Vector3()
 
@@ -44,6 +46,15 @@ func _physics_process(delta):
 	
 	player_velocity = move_and_slide(player_velocity, up)
 	touching_ground = is_on_floor()
+
+func snap_to_ground(from):
+	#var from = global_transform.origin
+	var to = from + -global_transform.basis.y * ground_snap_tolerance
+	var space_state = get_world().get_direct_space_state()
+	
+	var result = space_state.intersect_ray(from, to)
+	if !result.empty():
+		global_transform.origin.y = result.position.y
 
 func set_movement_dir():
 	cmd.forward_move = 0.0

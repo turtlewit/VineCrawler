@@ -41,6 +41,7 @@ attack=[ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_
 [physics]
 
 common/physics_fps=120
+3d/physics_engine="Bullet"
 
 [rendering]
 
