@@ -3,7 +3,7 @@ extends Camera
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
-var sensitivity = 0.1
+var sensitivity = .1
 
 var max_angle = 90
 

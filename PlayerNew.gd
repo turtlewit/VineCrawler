@@ -6,7 +6,7 @@ var cmd = {
 	up_move 		= 0.0
 }
 
-export var x_mouse_sensitivity = 0.1
+export var x_mouse_sensitivity = .1
 
 export var gravity = 20
 

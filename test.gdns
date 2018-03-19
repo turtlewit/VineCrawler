@@ -1,0 +1,7 @@
+[gd_resource type="NativeScript" format=2]
+
+[resource]
+
+resource_name = "test"
+class_name = "test"
+

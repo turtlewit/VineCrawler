@@ -1,6 +1,6 @@
 shader_type spatial;
 //render_mode blend_mix,depth_draw_opaque,cull_back,diffuse_burley,specular_schlick_ggx,skip_vertex_transform;
-render_mode depth_draw_opaque,cull_back,diffuse_burley, skip_vertex_transform, unshaded;
+render_mode skip_vertex_transform, vertex_lighting;
 uniform vec4 albedo : hint_color;
 uniform sampler2D texture_albedo : hint_albedo;
 uniform sampler2D alpha_mask;
@@ -20,21 +20,29 @@ uniform vec3 uv2_offset;
 varying vec4 VAR1;
 
 void vertex() {
+	
+	//MODELVIEW_MATRIX = PROJECTION_MATRIX * MODELVIEW_MATRIX;
+	
 	vec4 snap_to_pixel = PROJECTION_MATRIX * MODELVIEW_MATRIX * vec4(VERTEX, 1.0);
-	vec4 norm = MODELVIEW_MATRIX * vec4(VERTEX, 1.0);
+	
+	
+	
 	
 	vec4 vert = snap_to_pixel;
 	vert.xyz = snap_to_pixel.xyz / snap_to_pixel.w;
 	vert.x = floor(160.0 * vert.x) / 160.0;
 	vert.y = floor(120.0 * vert.y) / 120.0;
 	vert.xyz *= snap_to_pixel.w;
-	VERTEX = (INV_PROJECTION_MATRIX * vert).xyz;
+	//VERTEX = (INV_PROJECTION_MATRIX * vert).xyz;
+	VERTEX = (MODELVIEW_MATRIX * vec4(VERTEX, 1.0)).xyz;
+	NORMAL = (INV_PROJECTION_MATRIX * MODELVIEW_MATRIX * vec4(VERTEX, 0.0)).xyz;
 	//VERTEX = (PROJECTION_MATRIX * vec4(VERTEX, 1.0)).xyz;
-	float dist = length(norm);
+	//float dist = length(norm);
 	//UV *= (dist + (vert.w) / dist / 2.0) ;
 	
 	UV=UV*uv1_scale.xy+uv1_offset.xy;
 	VAR1 = vec4(UV * VERTEX.z, VERTEX.z, 0);
+	
 }
 
 
@@ -57,3 +65,6 @@ void fragment() {
 	
 }
 
+void light(){
+	//SPECULAR_LIGHT = vec3(0);
+}

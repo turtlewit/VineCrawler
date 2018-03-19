@@ -3,7 +3,7 @@ extends KinematicBody
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
-var sensitivity = 0.1
+var sensitivity = 1.0
 
 var max_speed = 20
 

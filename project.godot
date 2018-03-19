@@ -20,6 +20,9 @@ window/size/width=1920
 window/size/height=1080
 window/size/resizable=false
 window/size/fullscreen=true
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_width"
+window/stretch/shrink="1"
 
 [input]
 
@@ -45,5 +48,6 @@ common/physics_fps=120
 
 [rendering]
 
+threads/thread_model=2
 quality/filters/anisotropic_filter_level=16
 environment/default_environment="res://default_env.tres"
