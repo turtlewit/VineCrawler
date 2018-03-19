@@ -7,10 +7,10 @@ path="res://.import/health.png-fe502f4981772d05429453c15570bb25.stex"
 [deps]
 
 source_file="res://sprites/health.png"
-source_md5="b05bcd62fb9b428b45dbf6ffab7df6fc"
+source_md5="ba76348fa8823630ae36942a4c854beb"
 
 dest_files=[ "res://.import/health.png-fe502f4981772d05429453c15570bb25.stex" ]
-dest_md5="c2e25c7191a39c1c0fcf0d25217caac7"
+dest_md5="9024231f3278ed5f33e56d4279e5d807"
 
 [params]
 

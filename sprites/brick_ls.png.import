@@ -2,27 +2,28 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/brick_ls.png-8342b7733f526d1beb476267bb0ac72d.stex"
+path.s3tc="res://.import/brick_ls.png-8342b7733f526d1beb476267bb0ac72d.s3tc.stex"
+path.etc2="res://.import/brick_ls.png-8342b7733f526d1beb476267bb0ac72d.etc2.stex"
 
 [deps]
 
 source_file="res://sprites/brick_ls.png"
 source_md5="a644e3affb3deaedbf15728feba2b256"
 
-dest_files=[ "res://.import/brick_ls.png-8342b7733f526d1beb476267bb0ac72d.stex" ]
-dest_md5="ec23347fbc7a897c424a62c04b06fd74"
+dest_files=[ "res://.import/brick_ls.png-8342b7733f526d1beb476267bb0ac72d.s3tc.stex", "res://.import/brick_ls.png-8342b7733f526d1beb476267bb0ac72d.etc2.stex" ]
+dest_md5="af5842f68acd745ed51597398cf27c35"
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
-compress/normal_map=2
+compress/normal_map=0
 flags/repeat=true
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
-flags/srgb=1
+flags/srgb=0
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false

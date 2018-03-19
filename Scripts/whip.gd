@@ -4,7 +4,7 @@ extends Spatial
 # var a = 2
 # var b = "textvar"
 var anim_player
-var ray_length = 10
+var ray_length = 15
 var camera
 var has_attacked = false
 func _ready():
