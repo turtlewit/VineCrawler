@@ -1,13 +1,3 @@
-# Blender MTL File: 'wall.blend'
-# Material Count: 1
-
-newmtl Material
-Ns 96.078431
-Ka 1.000000 1.000000 1.000000
-Kd 1.000000 1.000000 1.000000
-Ks 0.500000 0.500000 0.500000
-Ke 0.000000 0.000000 0.000000
-Ni 1.000000
-d 1.000000
-illum 2
-map_Kd /home/tyler/Dev/godot/test-3D/sprites/brick_ls.png
+version https://git-lfs.github.com/spec/v1
+oid sha256:0f3004ef58ff596a3ff7052c4c5fd7a740aa878a5ffaec538b00d41062c5c0be
+size 292
